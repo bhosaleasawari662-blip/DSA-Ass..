@@ -1,0 +1,19 @@
+class Demo{
+   public static void main(String[]args){
+   int[]arr ={3,9,1,7};
+   int ans = fun(arr,0);
+   System.out.println(ans);
+ }
+ static int fun(int[]arr,int index){
+   if(index==arr.length-1){
+      return arr[index];
+  }
+  int max=fun(arr,index+1);
+
+ if(arr[index]>max){
+    return arr[index];
+}else{
+    return max;
+    }
+  }
+}
